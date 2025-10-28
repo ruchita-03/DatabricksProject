@@ -26,15 +26,15 @@
                   "datasetName": "299541d2",
                   "fields": [
                     {
-                      "name": "sum(total_airports)",
-                      "expression": "SUM(`total_airports`)"
+                      "name": "total_airports",
+                      "expression": "`total_airports`"
                     },
                     {
                       "name": "country",
                       "expression": "`country`"
                     }
                   ],
-                  "disaggregated": false
+                  "disaggregated": true
                 }
               }
             ],
@@ -43,7 +43,7 @@
               "widgetType": "bar",
               "encodings": {
                 "x": {
-                  "fieldName": "sum(total_airports)",
+                  "fieldName": "total_airports",
                   "scale": {
                     "type": "quantitative"
                   }
@@ -55,13 +55,16 @@
                   }
                 },
                 "color": {
-                  "fieldName": "sum(total_airports)",
+                  "fieldName": "total_airports",
                   "scale": {
                     "type": "quantitative",
                     "colorRamp": {
                       "mode": "scheme",
                       "scheme": "reds"
                     }
+                  },
+                  "legend": {
+                    "hide": true
                   }
                 }
               },
