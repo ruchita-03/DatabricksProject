@@ -1,0 +1,26 @@
+{
+  "evaluation": {
+    "source": {
+      "name": "total_records",
+      "display": "total_records",
+      "aggregation": "AGGREGATION_UNSPECIFIED"
+    },
+    "comparison_operator": "LESS_THAN",
+    "threshold": {
+      "value": {
+        "double_value": 100.0
+      }
+    },
+    "notification": {
+      "retrigger_seconds": 0,
+      "notify_on_ok": false
+    }
+  },
+  "schedule": {
+    "quartz_cron_schedule": "19 0 11 * * ?",
+    "timezone_id": "Asia/Calcutta"
+  },
+  "query_lines": [
+    "SELECT COUNT(*) AS total_records FROM raw.airports_delta;"
+  ]
+}
